@@ -33,7 +33,22 @@ Math.floor(a / b);
 }
 
 {const rate = 0.91;
-let currency = prompt('Введіть суму у доларах для переведення у євро');
-+ currency;
+let currency = +prompt('Введіть суму у доларах для переведення у євро');
 let cent = currency / rate;
-alert(cent.toFixed(2));}
+alert(cent.toFixed(2));
+}
+
+{const red = +prompt('Введіть значення для червоного кольору (від 0 до 255):');
+const green = +prompt('Введіть значення для зеленого кольору (від 0 до 255):');
+const blue = +prompt('Введіть значення для синього кольору (від 0 до 255):');
+alert('#' + red.toString(16) + green.toString(16) + blue.toString(16));
+}
+
+{const floors = +prompt('Введіть кількість поверхів:');
+const flatAmount = +prompt('Введіть кількість квартир на поверсі:');
+const flatNum = +prompt('Введіть номер квартири:');
+const flatsInOneEnt = floors * flatAmount;
+const entNum = Math.ceil(flatNum / flatsInOneEnt);
+const floor = Math.ceil((flatNum % flatsInOneEnt) / flatAmount);
+alert('Ваш підїзд:' + entNum + ', ваш поверх:' + floor);
+}
